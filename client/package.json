@@ -10,7 +10,8 @@
   "author": "sjquant",
   "license": "MIT",
   "dependencies": {
-    "electron": "^9.0.0"
+    "electron": "^9.0.0",
+    "zeromq": "^6.0.0-beta.6"
   },
   "devDependencies": {
     "electron-reloader": "^1.0.1"

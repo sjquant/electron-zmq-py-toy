@@ -3,6 +3,10 @@ try {
   require("electron-reloader")(module);
 } catch (_) {}
 
+try {
+  require("dotenv").config();
+} catch (_) {}
+
 function createWindow() {
   const win = new BrowserWindow({
     minWidth: 800,

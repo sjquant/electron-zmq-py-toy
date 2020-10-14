@@ -1,12 +1,15 @@
-const zmq = require("zeromq");
-const sock = new zmq.Request();
-
-sock.connect("tcp://127.0.0.1:5555");
+const { connectSock, getSock } = require("./sock.js");
+const { startPython } = require("./python.js");
 
 const addBtn = document.querySelector("#add-btn");
 const subBtn = document.querySelector("#sub-btn");
 const multBtn = document.querySelector("#mult-btn");
 const divBtn = document.querySelector("#div-btn");
+
+function startServer() {
+  startPython();
+  connectSock();
+}
 
 function getValueOne() {
   return parseFloat(document.querySelector("#inputOne").value);
@@ -17,6 +20,7 @@ function getValueTwo() {
 }
 
 async function sendMessage(command, args) {
+  const sock = getSock();
   await sock.send(
     JSON.stringify({
       command,
@@ -75,5 +79,9 @@ divBtn.addEventListener("click", async () => {
 });
 
 window.addEventListener("beforeunload", () => {
+  const sock = getSock();
   sock.send(JSON.stringify({ command: "Exit" }));
+  sock.close();
 });
+
+startServer();

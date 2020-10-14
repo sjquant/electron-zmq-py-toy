@@ -11,9 +11,11 @@
   "license": "MIT",
   "dependencies": {
     "electron": "^9.0.0",
+    "python-shell": "^2.0.2",
     "zeromq": "^6.0.0-beta.6"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "electron-reloader": "^1.0.1"
   }
 }

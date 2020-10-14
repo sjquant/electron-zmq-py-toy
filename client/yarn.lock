@@ -205,6 +205,11 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
   integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
 
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
@@ -616,6 +621,11 @@ pump@^3.0.0:
   dependencies:
     end-of-stream "^1.1.0"
     once "^1.3.1"
+
+python-shell@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/python-shell/-/python-shell-2.0.2.tgz#1206b1cb424c7754b771c402c289f1df4be7de5d"
+  integrity sha512-8zWhh3PQT8SxrYK/cxaLJkuzR+saHUnx83V5TrTlfdEDnLQ6/wVBIpc6YfYSRSRvcrz8vkORJlSzm1FYkEFq2Q==
 
 readable-stream@^2.2.2:
   version "2.3.7"

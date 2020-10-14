@@ -2,13 +2,12 @@ import zmq
 import time
 import json
 
-from core import Calculator
+from core import calculator
 
 addr = 'tcp://127.0.0.1:5555'
 ctx = zmq.Context()
 socket = ctx.socket(zmq.REP)
 socket.bind(addr)
-calculator = Calculator()
 
 class NoCommandError(Exception):
     pass

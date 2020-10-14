@@ -1,16 +1,14 @@
 const { PythonShell } = require("python-shell");
+const path = require("path");
 
 let python = null;
 
 module.exports = {
   startPython: function () {
     const options = {
-      pythonPath: process.env.PYTHON_PATH || "python",
+      pythonPath: path.join(process.resourcesPath, "py/ElectronZMQPyToy.exe"),
     };
-    python = new PythonShell(
-      process.env.SCRIPT_PATH || "../server/main.py",
-      options
-    );
+    python = new PythonShell(".", options);
     return python;
   },
 };

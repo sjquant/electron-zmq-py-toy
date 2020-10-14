@@ -4,18 +4,32 @@
   "description": "Client(Electron) side for electron-zmq-py-toy",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "prebuild": "cd ../server && build.bat",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.sjquant.electron-zmq-py-toy",
+    "productName": "ElectronZMQPyToy",
+    "copyright": "Copyright © 2020 SJQuant",
+    "win": {
+      "icon": "../icon.ico"
+    },
+    "directories": {
+      "output": "../dist"
+    },
+    "extraResources": ["py"]
   },
   "repository": "https://github.com/sjquant/electron-zmq-py-toy",
   "author": "sjquant",
   "license": "MIT",
   "dependencies": {
-    "electron": "^9.0.0",
     "python-shell": "^2.0.2",
     "zeromq": "^6.0.0-beta.6"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
+    "electron": "^9.0.0",
+    "electron-builder": "^22.9.1",
     "electron-reloader": "^1.0.1"
   }
 }

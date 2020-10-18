@@ -25,6 +25,8 @@ When you execute an electron application, it executes a Python server and connec
 
 That's it. It's so simple. For more detail, you can explore the codebase. The client directory is for Electron, and the server directory is for the python server.
 
+![how this works](./how-this-works.png)
+
 ## How to reproduce or test this project
 
 I tested this in Windows OS. If you want to test this on another platform, you are required to modify it to make it work
